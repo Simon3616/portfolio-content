@@ -1,5 +1,30 @@
+html {
+    font-size: 16px;
+    font-family: 'Arial', sans-serif;
+    color: white;
+}
 body{
     background: linear-gradient(to bottom right,grey,white);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+#homebody{
+    background-image: url('../images/home.jpg');
+    font-family:'Space Mono',monospace;
+}
+#gallerybody{
+    background-image: url('../images/gallery.jpg');
+    font-family:'Space Mono',monospace;
+}
+#educationbody{
+    background-image: url('../images/education.jpg');
+    font-family:'Space Mono',monospace;
+}
+#experiencebody{
+    background-image: url('../images/experience.jpg');
+    font-family:'Space Mono',monospace;
 }
 .active {
     background-color:black;
@@ -14,13 +39,19 @@ h1{
     align-items: center;
     font-size: xx-large;
 }
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
 #intro p{
-    display: block;
-    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 500px;
-    text-align: center;
+    animation: fadeIn 4s;
     
 }
+
 nav {
     height: 50px;
     border-top: white 2px solid;
@@ -30,7 +61,7 @@ nav {
  
 nav ul {
     list-style: none;
-    margin-left: 50px;
+    margin-left:50px;
 }
  
 nav li {
@@ -42,11 +73,11 @@ nav li {
 nav a {
     color: #fff;
     text-decoration: none;
-    padding: 20px 20px;
+    padding: 20px 40px;
 }
 img{
     height: 175px;
-	width:200px;
+	width:60%;
     border-top: grey 2px solid;
     border-bottom: grey  2px solid;
     background-color: grey;
@@ -58,4 +89,91 @@ img:hover{
     height: 300px;
     width:350px;
 }
+.container{
+    display:grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    row-gap: 30px;
+}
 
+.SJTU, .UCB, .UMICH{
+    grid-column: 1/span all;
+    grid-row:auto /span 1;
+}
+.SJTUgrad, .ucb_gate, .umich_campus{
+    grid-column: 2/span 1;
+    max-height: 500px;
+    overflow: hidden;
+}
+.SJTU{
+    grid-row: 1/span 1;
+}
+.SJTUgrad{
+    grid-row: 2/span 1;
+}
+.UCB{
+    grid-row: 3/span 1;
+}
+.ucb_gate{
+    grid-row: 4/span 1;
+}
+.UMICH{
+    grid-row: 5/span 1;
+}
+.umich_campus{
+    grid-row: 6/span 1;
+}
+.text-block{
+    color:black;
+    background-color: rgba(255, 255, 255, .8);
+    border: 10px solid black;
+    padding: 30px;
+    position: relative;
+    margin: auto;
+    /*Your code here:*/
+    text-align: center;
+    max-height: 25vh;
+    overflow:scroll;
+    /*Align the content in the center */
+  }
+  .item{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-left: 0;
+}
+@media all and (min-width: 800px){
+
+    .container{
+      /*Your code here */
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      /* See documentation for desktop view */
+    }
+    img{
+        width: 200px;
+    }
+  
+    .SJTU, .SJTUgrad {
+      /*Your code here */
+      grid-row: 1/span 1;
+      /* See documentation for desktop view */
+    }
+    .UCB,.ucb_gate{
+      grid-row: 2/span 1;
+    }
+    .UMICH,.umich_campus{
+      grid-row: 3/span 1;
+    }
+    .SJTU,.UCB,.UMICH{
+        grid-column: 1/span 1;
+    }
+    .SJTUgrad, .ucb_gate, .umich_campus{
+        grid-column: 2/span 1;
+    }
+}  
+
+@media screen and (prefers-reduced-motion: reduce){
+    header #intro p{
+        animation: none;
+    }  
+} 
