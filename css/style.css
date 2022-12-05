@@ -9,7 +9,9 @@ body{
     background-attachment: fixed;
     background-size: 100% 100%;
 }
-
+form{
+    color:gray;
+}
 #homebody{
     background-image: url('../images/home.jpg');
     font-family:'Space Mono',monospace;
@@ -80,7 +82,6 @@ img{
 	width:60%;
     border-top: grey 2px solid;
     border-bottom: grey  2px solid;
-    background-color: grey;
     padding: 5px;
     border-radius: 20px;
     margin: 10px;
