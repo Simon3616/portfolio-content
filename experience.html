@@ -33,46 +33,66 @@
 			</ul>
 		</nav>
 	</header>
-	<main>
+	<main class = "container">
 		This page is a Experience page. This pagr will introduce my project and internship experience.
 		More images will be added soon.
-		<figure>
-			<img src="images/robot.jpg" width="100" alt="headphoto">
-			<figcaption>Robot project</figcaption>
+		<figure class = "SJTUgrad">
+			<img src="images/Twitch Project.png" width="100" alt="headphoto">
+			<a href="https://github.com/Simon3616/Twitch_Project">Twitch project</a>
 		</figure>
-		<figure>
-			<img src="images/robot2.jpg" width="100" alt="headphoto">
-			<figcaption>Robot project</figcaption>
+		<figure class = "ucb_gate">
+			<img src="images/Stay rental.jpg" width="100" alt="headphoto">
+			<a href="https://github.com/Simon3616/Online_Rental">Stay Rental project</a>
 		</figure>
-	</main>
-	<section>
-		<h1>Twitch api project</h1>
-		<p>
+		<figure class = "umich_campus">
+			<img src="images/Isuzu.jpg" width="100" alt="headphoto">
+			<a href="http://www.isuzu.com/">Isuzu Internship</a>
+		</figure>
+	
+		<div class = "SJTU text-block">
+			<h1>Twitch api project</h1>
+			<p>
+			Built a full-stack web to search twitch resources and get recommendations using React and Ant Design.
 			
-		</p>
+			Implemented RESTful APIs using Java servlets, retrieved real Twitch resources using Twitch API.
 		
-	</section>
-	<section>
-		<h1>Online stay rental project</h1>
-		<p>
+			Applied spring and hibernate to deal with logic and database operation.Realized login/out and favorite function.
 			
-		</p>
-		
-	</section>
-	<section>
-		<h1>ISUZU internship</h1>
-		<p>
+			Extracted game information from Twitch resources to implement a Content-based algorithm.
 			
-		</p>
-		
-	</section>
-	<section>
-		<h1>machine learning internship</h1>
-		<p>
+			Deployed services to AWS EC2 for better stability.
+			</p>
 			
-		</p>
-		
-	</section>
+		</div>
+		<div class = "UCB text-block">
+			<h1>Online stay rental project</h1>
+			<p>
+			Designed a single page web application for hotel reservation and management using React. Bootstrapped the development with Ant Design.
+			
+			Realized backend services based on Spring Boot to support stay upload, delete, search and reserve.
+			
+			Conducted different approaches to store data of different sources. e.g. store user-generated data using MySQL, store media files for uploaded stays using Google Cloud Storage.
+			
+			Created geo index by Elasticsearch to support geo-based stay search based on user's selected locations.
+			
+			Accomplished token-based server side user authentication based on the Spring Security framework. 
+			
+			Deployed backend services to Google App Engine for better scalability and reliability. 	
+			</p>
+			
+		</div>
+		<div class = "UMICH text-block">
+			<h1>ISUZU internship</h1>
+			<p>
+			Investigate and research autonomous truck lateral control software solutions.
+			
+			Implement Drive-by-Wire interface into autonomous driving software stack.
+			
+			Design experiments to record and analyze lateral controller’s capabilities for a physical commercial vehicle.
+			</p>
+			
+		</div>
+	</main>	
 
 	<footer>
 		&copy; 2022
