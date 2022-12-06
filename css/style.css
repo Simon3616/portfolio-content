@@ -25,7 +25,11 @@ form{
     font-family:'Space Mono',monospace;
 }
 #experiencebody{
-    background-image: url('../images/experience.jpg');
+    background-image: url('../images/experience2.jpg');
+    font-family:'Space Mono',monospace;
+}
+#lifebody{
+    background-image: url('../images/life2.jpg');
     font-family:'Space Mono',monospace;
 }
 .active {
@@ -47,18 +51,23 @@ h1{
   }
 #intro p{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    align-self: center;
     width: 500px;
     animation: fadeIn 4s;
     
 }
-
+.container{
+    display:grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    row-gap: 30px;
+}
 nav {
     height: 50px;
     border-top: white 2px solid;
     border-bottom: white 2px solid;
     background-color:linear-gradient(to right,black,grey,white);
+    text-align: left;
+    grid-row: 1/span 1;
 }
  
 nav ul {
@@ -85,43 +94,41 @@ img{
     padding: 5px;
     border-radius: 20px;
     margin: 10px;
+    overflow: scroll;
 }
 img:hover{
     height: 300px;
     width:350px;
+    overflow: scroll;
 }
-.container{
-    display:grid;
-    grid-template-columns: 1fr 5fr 1fr;
-    row-gap: 30px;
-}
+
 
 .SJTU, .UCB, .UMICH{
     grid-column: 1/span all;
     grid-row:auto /span 1;
 }
 .SJTUgrad, .ucb_gate, .umich_campus{
-    grid-column: 2/span 1;
+    grid-column: 1/span all;
     max-height: 500px;
     overflow: hidden;
 }
 .SJTU{
-    grid-row: 1/span 1;
-}
-.SJTUgrad{
     grid-row: 2/span 1;
 }
-.UCB{
+.SJTUgrad{
     grid-row: 3/span 1;
 }
-.ucb_gate{
+.UCB{
     grid-row: 4/span 1;
 }
-.UMICH{
+.ucb_gate{
     grid-row: 5/span 1;
 }
-.umich_campus{
+.UMICH{
     grid-row: 6/span 1;
+}
+.umich_campus{
+    grid-row: 7/span 1;
 }
 .text-block{
     color:black;
@@ -143,11 +150,13 @@ img:hover{
     padding-left: 0;
 }
 @media all and (min-width: 800px){
-
+    nav{
+        text-align: center;
+    }
     .container{
       /*Your code here */
       display:grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 4fr 1fr 2fr;
       /* See documentation for desktop view */
     }
     img{
@@ -169,7 +178,14 @@ img:hover{
         grid-column: 1/span 1;
     }
     .SJTUgrad, .ucb_gate, .umich_campus{
-        grid-column: 2/span 1;
+        grid-column: 3/span all;
+    }
+    .list{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        row-gap: 40px;
+        grid-template-rows: 1fr 1fr 1fr;
+        overflow: scroll;
     }
 }  
 
